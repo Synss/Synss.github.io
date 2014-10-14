@@ -13,9 +13,10 @@ TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = u'en'
 
 # Custom domain
-STATIC_PATHS = ["images", "extra/CNAME"]
+STATIC_PATHS = ["images", "extra/CNAME", "extra/robots.txt"]
 EXTRA_PATH_METADATA = {
     "extra/CNAME": {"path": "CNAME"},
+    "extra/robots.txt": {"path": "robots.txt"},
 }
 
 # Feed generation is usually not desired when developing
