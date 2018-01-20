@@ -2,3 +2,12 @@ output
 publishconf.py
 pelican-plugins
 pelican-themes
+
+*.pid
+
+# Python stuff
+*.pyc
+__cache__
+
+# Virtual environments
+env/
