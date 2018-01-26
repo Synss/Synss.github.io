@@ -40,6 +40,8 @@ jobs:
       - deploy:
           name: publish site
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            make rsync_upload
+            if [ "$CIRCLE_BRANCH" = "master" ]; then
+              python3 -m venv venv
+              . venv/bin/activate
+              make rsync_upload
+            fi
