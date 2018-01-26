@@ -6,51 +6,37 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
       - image: circleci/python:3.6.1
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
     working_directory: ~/repo
-
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
+          - deps-{{ checksum "requirements.txt" }}
           # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
+          - deps-
       - run:
-          name: install dependencies
+          name: install deps
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-
       - save_cache:
           paths:
             - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-        
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
+          key: deps-{{ checksum "requirements.txt" }}
       - run:
-          name: run tests
+          name: generate site
           command: |
+            python3 -m venv venv
             . venv/bin/activate
-            python manage.py test
-
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
-
+            make html
+      - add_ssh_keys:
+          fingerprints:
+            - "b8:b1:5d:88:21:5a:58:78:2c:e7:45:b5:7f:40:ed:c4"
+      - deploy:
+          name: publish site
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            make rsync_upload
