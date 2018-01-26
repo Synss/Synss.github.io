@@ -17,6 +17,9 @@ jobs:
           - deps-
       - run:
           name: install deps
+          command: sudo apt-get install rsync
+      - run:
+          name: install python deps
           command: |
             python3 -m venv venv
             . venv/bin/activate
