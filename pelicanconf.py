@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Mathias Laurin'
 SITENAME = "Synss' Blog"
-SITEURL = ''
+SITEURL = 'http://blog.synss.me'
 
 PATH = 'content'
 
@@ -13,8 +13,8 @@ TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+# FEED_ALL_ATOM = None
+# CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
