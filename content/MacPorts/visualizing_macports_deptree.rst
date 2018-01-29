@@ -2,7 +2,7 @@ Visualizing MacPorts' dependency tree
 =====================================
 
 :Date: 2014-12-27 22:50
-:Slug: managed-macports-upgrade-2
+:Slug: managed-macports-upgrades-2
 :Tags: MacPorts, shell, Graphviz
 
 
