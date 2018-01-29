@@ -22,7 +22,8 @@ AUTHOR_FEED_RSS = None
 DELETE_OUTPUT_DIRECTORY = True
 
 # Blogroll
-LINKS = ()
+LINKS = (('Archives', 'archives.html'),
+         ('Tags', 'tags.html'))
 
 # Social widget
 SOCIAL = (('linkedin', 'https://www.linkedin.com/in/mathiaslaurin/'),
