@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /drafts/
-Disallow: /category/
 Disallow: /feeds/
 Disallow: /tag/
 Disallow: /theme/

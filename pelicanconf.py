@@ -31,5 +31,11 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
+# Static paths and metadata
+STATIC_PATHS = ['images', 'extra/robots.txt']
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+}
+
 GOOGLE_ANALYTICS = 'UA-56056810-1'
 DISQUS_SITENAME = 'synssblog'
