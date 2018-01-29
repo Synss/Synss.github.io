@@ -40,5 +40,13 @@ EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
 }
 
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'exclude': ['tag/', 'category/', 'theme/']
+}
+
 GOOGLE_ANALYTICS = 'UA-56056810-1'
 DISQUS_SITENAME = 'synssblog'
