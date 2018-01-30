@@ -31,7 +31,6 @@ jobs:
       - run:
           name: generate site
           command: |
-            python3 -m venv venv
             . venv/bin/activate
             make html
       - add_ssh_keys:
@@ -41,7 +40,6 @@ jobs:
           name: publish site
           command: |
             if [ "$CIRCLE_BRANCH" = "master" ]; then
-              python3 -m venv venv
               . venv/bin/activate
               make rsync_upload
             fi
