@@ -29,6 +29,11 @@ jobs:
             - ./venv
           key: deps-{{ checksum "requirements.txt" }}
       - run:
+          name: run doctests
+          command: |
+            . venv/bin/activate
+            pytest --doctest-glob="*.rst" content
+      - run:
           name: generate site
           command: |
             . venv/bin/activate
