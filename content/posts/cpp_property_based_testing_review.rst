@@ -22,6 +22,8 @@ assumptions specified by the programmer.  The test suite generates tests
 to falsify these assumptions and eventually presents a minimal failing
 case for further investigation.
 
+.. PELICAN_END_SUMMARY
+
 So here is what I found regarding PBT libraries in the C++ world.  Note
 that this is strictly a review of the libraries I found as I have not
 (yet) used any of the libraries presented here.

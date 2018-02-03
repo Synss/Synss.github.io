@@ -50,12 +50,14 @@ EXTRA_PATH_METADATA = {
 }
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap']
+PLUGINS = ['sitemap', 'summary']
 
 SITEMAP = {
     'format': 'xml',
     'exclude': ['tag/', 'category/', 'theme/']
 }
+
+SUMMARY_USE_FIRST_PARAGRAPH = True
 
 GOOGLE_ANALYTICS = 'UA-56056810-1'
 DISQUS_SITENAME = 'synssblog'

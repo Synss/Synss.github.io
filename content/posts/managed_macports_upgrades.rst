@@ -11,8 +11,6 @@ Upgrading a full MacPorts install (the package manager for OS X) install can be
 time consuming.  Here, I will show how ``port echo requested and outdated``
 helps limiting the upgrade to the program that are really important to you.
 
-.. PELICAN_END_SUMMARY
-
 Introduction
 ------------
 
