@@ -3,7 +3,7 @@ Managed MacPorts upgrades: Deciding what upgrades are needed
 
 :Date: 2014-10-07 21:00
 :Modified: 2018-01-29 23:30
-:Slug: managed-macports-upgrades-1
+:Category: MacPorts
 :Tags: MacPorts, shell
 
 

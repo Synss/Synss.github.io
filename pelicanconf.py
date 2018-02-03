@@ -31,8 +31,17 @@ SOCIAL = (('linkedin', 'https://www.linkedin.com/in/mathiaslaurin/'),
 
 DEFAULT_PAGINATION = False
 
+ARTICLE_URL = '{date:%Y}/{slug}'
+ARTICLE_SAVE_AS = '{date:%Y}/{slug}/index.html'
+
+CATEGORY_URL = 'category/{slug}'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+
+TAG_URL = 'tag/{slug}'
+TAG_SAVE_AS = 'tag/{slug}/index.html'
+
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
 # Static paths and metadata
 STATIC_PATHS = ['images', 'extra/robots.txt']

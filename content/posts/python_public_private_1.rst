@@ -2,7 +2,6 @@ Read-only attributes in Python
 ==============================
 
 :Date: 2018-01-30 21:30
-:Slug: python-public-private-1
 :Category: Python
 :Tags: Python, object-oriented programming
 
