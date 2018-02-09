@@ -2,6 +2,7 @@ Read-only attributes in Python
 ==============================
 
 :Date: 2018-01-30 21:30
+:Modified: 2018-02-09 20:30
 :Category: Python
 :Tags: Python, object-oriented programming
 
@@ -35,7 +36,9 @@ The bad way
 
 The way I see it accomplished most often (I have done it in the past) is
 to define a private variable ``_protected`` and a ``property`` for the
-same variable::
+same variable:
+
+.. code-block:: python
 
     >>> class Point:
     ...     def __init__(self, x, y):
@@ -93,7 +96,9 @@ attributes on a class.  Then we can see how to instrument Python to drop
 the "write" part to get immutability.
 
 Setting an attribute on a class adds an entry to the ``__dict__`` the
-class and binds the name of the attribute to its value::
+class and binds the name of the attribute to its value
+
+.. code-block:: python
 
     >>> class K:
     ...     pass
@@ -111,7 +116,9 @@ class and binds the name of the attribute to its value::
     'meaning of life'
 
 Properties are checked before ``__dict__`` during the attribute lookup
-so that defining a getter property gets us where we want::
+so that defining a getter property gets us where we want:
+
+.. code-block:: python
 
     >>> class Point:
     ...     def __init__(self, x, y):
@@ -167,7 +174,7 @@ perfectly applicable to Python.  A closure is a function that accesses
 data defined in its enclosing scope.  This data may in turn be invisible
 to the outermost scope.  So it can be used to hide things.
 
-::
+.. code-block:: python
 
     >>> def encapsulate(value, *, readonly=False):
     ...     def getter(self):
@@ -208,7 +215,9 @@ to the outermost scope.  So it can be used to hide things.
        ...
     AttributeError: can't set attribute
 
-Actually, there is another way to access the data from the closure::
+Actually, there is another way to access the data from the closure
+
+.. code-block:: python
 
     >>> p.__class__.x.fget.__closure__[0].cell_contents
     5
@@ -220,7 +229,7 @@ Bonus: The other way around: read-write attribute on a namedtuple
 
 Disclaimer again: really, don't do that!
 
-::
+.. code-block:: python
 
     >>> from collections import namedtuple
     >>> class Point(namedtuple("Point", "x y z")):
