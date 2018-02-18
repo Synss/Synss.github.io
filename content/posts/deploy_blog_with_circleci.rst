@@ -2,7 +2,7 @@ Deploy a static website using continuous integration
 ====================================================
 
 :Date: 2018-02-17 14:00
-:Category: Continuous Integration
+:Category: CI
 :Tags: Continuous Integration
 
 Summary
