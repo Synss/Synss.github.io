@@ -41,9 +41,27 @@ Links
 - Source code: https://github.com/Synss/python-mbedtls
 - Documentation: https://synss.github.io/python-mbedtls/
 
+python-mbedtls 0.9.0 released
+=============================
 
-python-mbedtls 0.8 released
-===========================
+This is a bug fix release.
+
+What's new
+----------
+
+This release fixes the source distribution.  Installing with pip
+should now work!
+
+API changes
+-----------
+
+- X.509 certificates now have a `next()` method returning the next certificate
+  from a chain.
+- `md` implements the `block_size` property.
+
+
+python-mbedtls 0.8 released [withdrawn]
+=======================================
 
 `python-mbedtls` 0.8 features:
 
