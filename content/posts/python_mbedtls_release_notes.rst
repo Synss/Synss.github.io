@@ -3,7 +3,7 @@ python-mbedtls release notes
 ============================
 
 :Date: 2018-02-17 17:00
-:Modified: 2018-04-07 10:30
+:Modified: 2018-07-04 20:30
 :Category: Python
 :Tags: Python, TLS, SSL, Cryptography
 :Slug: python-mbedtls-release-notes
@@ -40,6 +40,55 @@ Links
 
 - Source code: https://github.com/Synss/python-mbedtls
 - Documentation: https://synss.github.io/python-mbedtls/
+
+python-mbedts 0.11.1 released
+=============================
+
+Update the change log.
+
+
+python-mbedtls 0.11.0 released
+==============================
+
+This release adds Diffie-Hellman-Merkle key exchange and secure numbers.
+
+What's new
+----------
+
+- Added support for Diffie-Hellman-Merkle key exchange (`pk.DHServer()` and
+  `pk.DHClient()`).
+- MPI (multi-precision integers) now implement the full `numbers.Integral` API.
+  (`mpi.MPI()`).
+
+API changes
+-----------
+
+- This release changes the exception model.  The library now raises a single
+  exception: `MbedTLSError`.
+- Methods from `pk` returning an integer now return an secure integer.
+
+
+python-mbedtls 0.10.0 released
+==============================
+
+This release adds elliptic curve cryptography.
+
+What's new
+----------
+
+ECDSA (EC signature) and ECDH (EC key exchange) as well as ECDHE (ephemeral EC
+key exchange) are now supported.
+
+API changes
+-----------
+
+- `RSA.generate()` returns the private key.
+- `to_DER()` and `to_PEM()` are obsolete and will be removed.
+  Users should call `export_key()` and `export_public_key()` instead.
+- `has_public()` and `has_private()` are removed.
+- `__str__()` returns the private key in PEM format.
+- `to_bytes()` and `__bytes__()` return the private key in DER format.
+
 
 python-mbedtls 0.9.0 released
 =============================
