@@ -17,7 +17,9 @@ jobs:
           - deps-
       - run:
           name: install deps
-          command: sudo apt-get install rsync
+          command: |
+              sudo apt-get update
+              sudo apt-get install rsync
       - run:
           name: install python deps
           command: |
