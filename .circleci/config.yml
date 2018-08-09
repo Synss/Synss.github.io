@@ -40,6 +40,9 @@ jobs:
           command: |
             . venv/bin/activate
             make html
+      - store_artifacts:
+          path: output
+          destination: artifacts
       - add_ssh_keys:
           fingerprints:
             - "b8:b1:5d:88:21:5a:58:78:2c:e7:45:b5:7f:40:ed:c4"
