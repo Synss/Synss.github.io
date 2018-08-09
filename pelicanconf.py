@@ -50,7 +50,7 @@ EXTRA_PATH_METADATA = {
 }
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['sitemap', 'summary']
+PLUGINS = ['sitemap', 'summary', 'plantuml']
 
 SITEMAP = {
     'format': 'xml',
